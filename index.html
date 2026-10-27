@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Alex Mercer — AI Developer & Machine Learning Engineer</title>
+<meta name="description" content="AI Developer & ML Engineer specializing in production-grade LLMs, Computer Vision, and MLOps. Building AI systems that ship." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<div class="noise"></div>
+<div class="cursor-glow" id="cursorGlow"></div>
+<nav>
+  <div class="nav-inner">
+    <div class="logo"><span class="logo-mark"><span class="logo-mark-inner"></span></span><span class="logo-text">Dan</span></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Hire Me</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="menu">☰</button>
+  </div>
+</nav>
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="badge"><span class="badge-dot"></span>Available for AI roles & consulting</div>
+        <h1 class="hero-title">I build <span class="gradient">production-grade AI</span> that ships to millions.</h1>
+        <p class="hero-sub">I'm an <strong>AI Developer & Machine Learning Engineer</strong> specializing in LLMs, computer vision, and MLOps. I turn messy, real-world data into <strong>fast, reliable, revenue-driving AI systems</strong> — from prototype to production.</p>
+        <div class="cta-row">
+          <a href="#projects" class="btn btn-primary">View Projects ↓</a>
+          <a href="#" class="btn btn-ghost" onclick="alert('Resume download placeholder — link your PDF here.'); return false;">Download Resume</a>
+          <a href="#contact" class="btn btn-ghost">Contact Me</a>
+        </div>
+        <div class="hero-stats">
+          <div><div class="stat-num" data-count="40">0</div><div class="stat-label">% Latency Cut</div></div>
+          <div><div class="stat-num" data-count="12">0</div><div class="stat-label">Models Shipped</div></div>
+          <div><div class="stat-num" data-count="99.2">0</div><div class="stat-label">% Uptime SLA</div></div>
+          <div><div class="stat-num" data-count="3">0</div><div class="stat-label">Papers / OSS</div></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+<div class="float-chip chip-1">⚡ p95 latency 42ms</div>
+
+        <div class="avatar-wrap">
+          <div class="avatar">
+            <img src="assets/my_image.jpg" alt="Dan" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <span class="avatar-fallback">D</span>
+          </div>
+          <div class="avatar-ring"></div>
+        </div>
+        <div class="float-chip chip-2">🧠 Llama 3 · RAG · FAISS</div>
+        <div class="float-chip chip-3">📦 Docker · K8s · MLflow</div>
+        <div class="code-card">
+          <div class="code-header"><span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span></div>
+          <div class="code-line"><span class="cm"># production inference pipeline</span></div>
+          <div class="code-line"><span class="kw">from</span> transformers <span class="kw">import</span> AutoModelForCausalLM</div>
+          <div class="code-line"><span class="kw">from</span> langchain <span class="kw">import</span> RetrievalQA</div>
+          <div class="code-line">&nbsp;</div>
+          <div class="code-line"><span class="fn">model</span> = AutoModelForCausalLM.from_pretrained(</div>
+          <div class="code-line">&nbsp;&nbsp;<span class="str">"meta-llama/Llama-3-8B"</span>,</div>
+          <div class="code-line">&nbsp;&nbsp;torch_dtype=<span class="str">"bfloat16"</span>,</div>
+          <div class="code-line">&nbsp;&nbsp;device_map=<span class="str">"auto"</span></div>
+          <div class="code-line">)</div>
+          <div class="code-line">&nbsp;</div>
+          <div class="code-line"><span class="fn">chain</span> = RetrievalQA.from_chain_type(</div>
+          <div class="code-line">&nbsp;&nbsp;llm=model, retriever=<span class="fn">faiss_index</span>,</div>
+          <div class="code-line">&nbsp;&nbsp;return_source_documents=<span class="kw">True</span></div>
+          <div class="code-line">)</div>
+          <div class="code-line">&nbsp;</div>
+          <div class="code-line"><span class="cm"># → 94.3% accuracy · 42ms p95</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="section-label">01 · About</div>
+    <h2 class="section-title">Engineer first. Researcher at heart.</h2>
+    <p class="section-desc">I sit at the intersection of deep learning research and production software engineering — building AI that doesn't just demo well, but survives real traffic, real users, and real constraints.</p>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>My journey started with a fascination for how machines learn from data, which quickly evolved into a career building <strong>end-to-end AI systems</strong>. Over the years I've trained, fine-tuned, and deployed models across NLP, computer vision, and generative AI — always with a bias toward shipping measurable value.</p>
+        <p>I care deeply about the unglamorous parts: <strong>data pipelines, evaluation harnesses, latency budgets, cost per inference, and monitoring</strong>. A model that scores 99% in a notebook but fails in production is a failure. I build for the latter.</p>
+        <p class="quote">"The best AI is invisible — it just makes the product feel magical."</p>
+        <p>Today I partner with AI startups and enterprise teams to take ideas from whiteboard to deployed, monitored, and continuously improving ML systems. I'm equally comfortable in PyTorch research code and Kubernetes manifests.</p>
+      </div>
+      <div class="skills reveal">
+        <div class="skill-group">
+          <h4>Frameworks & Libraries</h4>
+          <div class="skill-tags">
+            <span class="tag">PyTorch</span><span class="tag">TensorFlow</span><span class="tag">Transformers</span><span class="tag">LangChain</span><span class="tag">LlamaIndex</span><span class="tag">Pydantic</span><span class="tag">FastAPI</span><span class="tag">scikit-learn</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>AI Domains</h4>
+          <div class="skill-tags">
+            <span class="tag">LLMs / RAG</span><span class="tag">Fine-Tuning (LoRA/QLoRA)</span><span class="tag">Computer Vision</span><span class="tag">Object Detection</span><span class="tag">NLP</span><span class="tag">Embeddings</span><span class="tag">Prompt Engineering</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>Infrastructure & MLOps</h4>
+          <div class="skill-tags">
+            <span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">MLflow</span><span class="tag">AWS</span><span class="tag">GCP</span><span class="tag">FAISS</span><span class="tag">vLLM</span><span class="tag">Weights & Biases</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>Languages & Tools</h4>
+          <div class="skill-tags">
+            <span class="tag">Python</span><span class="tag">C++</span><span class="tag">SQL</span><span class="tag">Git</span><span class="tag">Linux</span><span class="tag">ONNX</span><span class="tag">TensorRT</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <div class="section-label">02 · Featured Work</div>
+    <h2 class="section-title">AI systems built for production.</h2>
+    <p class="section-desc">Three projects that showcase the full arc — problem framing, model selection, fine-tuning, deployment, and measurable impact.</p>
+    <div class="projects">
+      <article class="project-card reveal">
+        <div class="project-head">
+          <div>
+            <div class="project-num">PROJECT 01 · GENERATIVE AI / RAG</div>
+            <h3 class="project-title">Enterprise Knowledge Assistant</h3>
+            <div class="project-arch">Architecture: Llama 3 8B · LoRA Fine-Tune · FAISS · FastAPI · Docker</div>
+          </div>
+          <div class="project-links">
+            <a class="icon-btn" href="#" title="GitHub" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2.1c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg></a>
+            <a class="icon-btn" href="#" title="Live Demo" aria-label="Demo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-block">
+            <h5>Problem Statement</h5>
+            <p>Internal teams at a mid-size SaaS company wasted ~12 hrs/week searching across fragmented docs, wikis, and Slack. Off-the-shelf chatbots hallucinated and couldn't cite sources, blocking adoption.</p>
+          </div>
+          <div class="project-block">
+            <h5>Engineering Approach</h5>
+            <ul>
+              <li>Designed chunking + embedding pipeline (bge-large) over 40k docs with metadata filters.</li>
+              <li>LoRA fine-tuned Llama 3 8B on 8k curated Q&A pairs for domain tone & citation format.</li>
+              <li>Built hybrid retrieval (dense FAISS + BM25) with reranking and source attribution.</li>
+              <li>Deployed via FastAPI + Docker on AWS ECS with autoscaling and Redis caching.</li>
+            </ul>
+          </div>
+          <div class="project-block">
+            <h5>Tech Stack & Models</h5>
+            <div class="stack-row">
+              <span class="stack-pill">Llama 3 8B</span><span class="stack-pill">LoRA</span><span class="stack-pill">FAISS</span><span class="stack-pill">bge-large</span><span class="stack-pill">FastAPI</span><span class="stack-pill">Docker</span><span class="stack-pill">AWS ECS</span>
+            </div>
+          </div>
+          <div class="project-block">
+            <h5>Results & Metrics</h5>
+            <div class="metrics">
+              <span class="metric">94.3% answer accuracy</span>
+              <span class="metric">-62% search time</span>
+              <span class="metric">p95 380ms</span>
+              <span class="metric">$0.004 / query</span>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="project-card reveal">
+        <div class="project-head">
+          <div>
+            <div class="project-num">PROJECT 02 · COMPUTER VISION</div>
+            <h3 class="project-title">Real-Time Defect Detection on Assembly Line</h3>
+            <div class="project-arch">Architecture: YOLOv8 · TensorRT · Edge GPU · ONNX · Streamlit Dashboard</div>
+          </div>
+          <div class="project-links">
+            <a class="icon-btn" href="#" title="GitHub" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2.1c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg></a>
+            <a class="icon-btn" href="#" title="Case Study" aria-label="Case Study"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></a>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-block">
+            <h5>Problem Statement</h5>
+            <p>Manual QC on a high-throughput line missed ~6% of surface defects, causing downstream rework and customer returns. Inspection had to run at 30+ FPS on edge hardware with <50ms latency.</p>
+          </div>
+          <div class="project-block">
+            <h5>Engineering Approach</h5>
+            <ul>
+              <li>Curated & labeled 18k images across 14 defect classes; handled class imbalance via focal loss + augmentation.</li>
+              <li>Trained YOLOv8m, then exported to ONNX and optimized with TensorRT (FP16/INT8).</li>
+              <li>Built async capture→inference→alert pipeline with graceful degradation & offline buffering.</li>
+              <li>Delivered operator dashboard for live monitoring, defect heatmaps, and weekly model drift reports.</li>
+            </ul>
+          </div>
+          <div class="project-block">
+            <h5>Tech Stack & Models</h5>
+            <div class="stack-row">
+              <span class="stack-pill">YOLOv8</span><span class="stack-pill">TensorRT</span><span class="stack-pill">ONNX</span><span class="stack-pill">OpenCV</span><span class="stack-pill">Python</span><span class="stack-pill">Streamlit</span><span class="stack-pill">Edge GPU</span>
+            </div>
+          </div>
+          <div class="project-block">
+            <h5>Results & Metrics</h5>
+            <div class="metrics">
+              <span class="metric">97.8% mAP@0.5</span>
+              <span class="metric">-71% defect escapes</span>
+              <span class="metric">42ms p95 latency</span>
+              <span class="metric">30 FPS sustained</span>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="project-card reveal">
+        <div class="project-head">
+          <div>
+            <div class="project-num">PROJECT 03 · MLOPS / OPTIMIZATION</div>
+            <h3 class="project-title">Inference Cost & Latency Optimization Platform</h3>
+            <div class="project-arch">Architecture: vLLM · Quantization · Batching · MLflow · Kubernetes · Prometheus</div>
+          </div>
+          <div class="project-links">
+            <a class="icon-btn" href="#" title="GitHub" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2.1c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg></a>
+            <a class="icon-btn" href="#" title="Write-up" aria-label="Write-up"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></a>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-block">
+            <h5>Problem Statement</h5>
+            <p>An LLM product's inference bill grew 3x in a quarter while p95 latency degraded under load. Need to cut cost per token and stabilize tail latency without quality regression.</p>
+          </div>
+          <div class="project-block">
+            <h5>Engineering Approach</h5>
+            <ul>
+              <li>Profiled bottlenecks; replaced naive serving with vLLM (PagedAttention, continuous batching).</li>
+              <li>Applied AWQ 4-bit quantization + speculative decoding; validated quality with eval harness.</li>
+              <li>Implemented dynamic batching, KV-cache reuse, and request prioritization by SLA tier.</li>
+              <li>Added Prometheus/Grafana dashboards + autoscaling HPA on GPU utilization.</li>
+            </ul>
+          </div>
+          <div class="project-block">
+            <h5>Tech Stack & Models</h5>
+            <div class="stack-row">
+              <span class="stack-pill">vLLM</span><span class="stack-pill">AWQ</span><span class="stack-pill">Kubernetes</span><span class="stack-pill">MLflow</span><span class="stack-pill">Prometheus</span><span class="stack-pill">Grafana</span><span class="stack-pill">Python</span>
+            </div>
+          </div>
+          <div class="project-block">
+            <h5>Results & Metrics</h5>
+            <div class="metrics">
+              <span class="metric">-40% inference latency</span>
+              <span class="metric">-58% cost / token</span>
+              <span class="metric">2.3x throughput</span>
+              <span class="metric">99.2% SLA uptime</span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+<!-- RESEARCH -->
+<section id="research">
+  <div class="container">
+    <div class="section-label">03 · Research & Open Source</div>
+    <h2 class="section-title">Sharing what I learn.</h2>
+    <p class="section-desc">Papers, open-source contributions, and published models — because the best engineering is open.</p>
+    <div class="research-grid">
+      <div class="research-card reveal">
+        <div class="research-icon ri-1">📄</div>
+        <h4>Efficient RAG with Hybrid Retrieval</h4>
+        <p>Preprint on combining dense + sparse retrieval with learned reranking for enterprise QA. +11% nDCG@10 over dense-only baselines.</p>
+        <a href="#">arXiv:2401.xxxxx →</a>
+      </div>
+      <div class="research-card reveal">
+        <div class="research-icon ri-2">🤗</div>
+        <h4>Hugging Face Models</h4>
+        <p>Published fine-tuned Llama 3 variant and embedding models with 50k+ downloads. Includes eval cards and reproducible training scripts.</p>
+        <a href="#">huggingface.co/alexmercer →</a>
+      </div>
+      <div class="research-card reveal">
+        <div class="research-icon ri-3">⭐</div>
+        <h4>Open Source Contributions</h4>
+        <p>Active contributor to LangChain, vLLM, and Transformers. Maintainer of an open-source eval harness for RAG pipelines (1.2k GitHub stars).</p>
+        <a href="#">github.com/alexmercer →</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="contact">
+      <div class="contact-box reveal">
+        <h2>Let's build something intelligent.</h2>
+        <p>Open to full-time AI/ML roles, consulting engagements, and research collaborations. If you're building AI that matters, let's talk.</p>
+        <div class="contact-links">
+          <a class="social" href="mailto:dan@example.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> Email</a>
+          <a class="social" href="#"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2.1c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg> GitHub</a>
+          <a class="social" href="#"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg> LinkedIn</a>
+          <a class="social" href="#"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.1 3H5.9C4.3 3 3 4.3 3 5.9v12.2C3 19.7 4.3 21 5.9 21h12.2c1.6 0 2.9-1.3 2.9-2.9V5.9C21 4.3 19.7 3 18.1 3zM8.5 17.5H6V10h2.5v7.5zM7.25 8.8c-.8 0-1.45-.65-1.45-1.45S6.45 5.9 7.25 5.9s1.45.65 1.45 1.45-.65 1.45-1.45 1.45zM18 17.5h-2.5v-3.9c0-.93-.02-2.13-1.3-2.13-1.3 0-1.5.99-1.5 2.06v4h-2.5V10h2.4v1.03h.03c.33-.63 1.14-1.3 2.35-1.3 2.52 0 2.99 1.66 2.99 3.82v3.95z"/></svg> Kaggle</a>
+          <a class="social" href="#"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg> Hugging Face</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="container">© 2026 Dan · Built with code, curiosity, and caffeine. · <span style="color:var(--accent-2)">v2.4.1</span></div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
